@@ -26,6 +26,24 @@ myAbTest.add('PHBs new idea', function() {
 myAbTest.select();
 ```
 
+This will create a test scenario that runs 10% of the time.
+```javascript
+var abSplit = require('ab-split/ab-split');
+
+var myAbTest = abSplit.create('test-name');
+
+myAbTest.add('default', function() {
+	//set up default
+});
+
+myAbTest.add('PHBs new idea', function() {
+	//set up test
+}, 0.1); // <-------- this number is the odds of choosing this scenario.
+
+myAbTest.select();
+```
+
+
 ## A/B Test Methods
 
 You must first create a test with `myAbTest = abSplit.create('test-name')`. Then you can add options to the test.
