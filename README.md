@@ -1,4 +1,4 @@
-*AB-Split
+# AB-Split
 
 AB-Split is an A/B testing utility that allows selects from different scenarios and persists your selection. You can add scenarios with odds, or equally split them.
 
@@ -6,7 +6,7 @@ Scenarios have a name, a callback, and optional odds.
 
 When a scenario is chosen, the selection will persist for a set amount of time (defaults to 30 days), as long as the selected option is still available.
 
-** Basic Usage
+## Basic Usage
 
 This will create a test with a default and a new idea, split 50/50.
 
@@ -26,7 +26,7 @@ myAbTest.add('PHBs new idea', function() {
 myAbTest.select();
 ```
 
-** A/B Test Methods
+## A/B Test Methods
 
 You must first create a test with `myAbTest = abSplit.create('test-name')`. Then you can add options to the test.
 
