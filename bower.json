@@ -1,0 +1,26 @@
+{
+  "name": "ab-split",
+  "main": "ab-split.js",
+  "version": "1.0.0",
+  "authors": [
+    "Stu Kabakoff <stuart.kabakoff@mlb.com>"
+  ],
+  "description": "An A/B testing utilitiy",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "storage.js": "~1.0.0"
+  },
+  "devDependencies": {
+    "requirejs": "~2.1.2",
+    "shims": "0.0.1",
+    "mocha": "~1.12.0",
+    "expect": "~0.2.0"
+  }
+}

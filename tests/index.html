@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Unit Tests for ab-split</title>
+<link rel="stylesheet" href="../bower_components/mocha/mocha.css" />
+
+<script src="../bower_components/requirejs/require.js"></script>
+<script src="../bower_components/expect/expect.js"></script>
+<script src="../bower_components/mocha/mocha.js"></script>
+</head>
+<body>
+<div id="mocha"></div>
+
+<script type="text/javascript">
+	require.config({
+		baseUrl: "../bower_components",
+		paths: {
+			"ab-split": "../ab-split",
+			"tests": "../tests/tests"
+		}
+	});
+
+	mocha.setup('bdd');
+
+	require(['tests'], function() {
+		mocha.checkLeaks();
+		mocha.globals(['jQuery']);
+		(window.mochaPhantomJS || mocha).run();
+	});
+	
+	// ADD THIS TO obj.conf
+	// NameTrans fn="map" name="AJAXProxy" from="/gd.qa.mlb.com" to="http://gd.qa.mlb.com"
+
+
+
+
+</script>
+</body>
+</html>
