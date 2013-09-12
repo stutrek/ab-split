@@ -1,7 +1,7 @@
 {
   "name": "ab-split",
   "main": "ab-split.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "authors": [
     "Stu Kabakoff <stuart.kabakoff@mlb.com>"
   ],
@@ -15,7 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "storage.js": "~1.0.0"
+    "storage.js": "~1.0.1"
   },
   "devDependencies": {
     "requirejs": "~2.1.2",
