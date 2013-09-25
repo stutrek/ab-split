@@ -88,7 +88,7 @@ define(['storage.js/storage'], function( storage ) {
 
 			options[savedData.selection].callback();
 			
-			savedData.safeSave(this.saveTime);
+			savedData.safeSave(new Date().getTime() + this.saveTime);
 			this.selection = savedData.selection;
 		};
 	}
