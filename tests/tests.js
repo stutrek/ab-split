@@ -28,6 +28,19 @@ define(['ab-split'], function( abSplit ) {
 			});
 			
 		});
+		describe('#No Callback', function() {
+			
+			var ab = abSplit.create('ab');
+			ab.saveTime = -1;
+
+			ab.add('one');
+			ab.select();
+
+			it( 'The only item was selected', function() {
+				expect(ab.selection).to.be('one');
+			});
+			
+		});
 		describe('#100% odds', function() {
 			
 			var called = false;

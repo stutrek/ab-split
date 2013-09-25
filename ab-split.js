@@ -7,6 +7,8 @@ define(['storage.js/storage'], function( storage ) {
 		return arr[Math.floor(Math.random() * (arr.length))];
 	}
 
+	function noop(){}
+
 	function AbSplit( name ) {
 		var options = {};
 
@@ -16,7 +18,7 @@ define(['storage.js/storage'], function( storage ) {
 		this.add = function( optionName, callback, odds ) {
 			if (typeof callback === 'number') {
 				odds = callback;
-				callback = function(){};
+				callback = noop;
 			}
 			if (options[optionName]) {
 				throw new Error(optionName+' added to A/B test '+name+' twice.');
@@ -34,7 +36,7 @@ define(['storage.js/storage'], function( storage ) {
 			}
 			options[optionName] = {
 				name: optionName,
-				callback: callback,
+				callback: callback || noop,
 				odds: odds
 			};
 		};
